@@ -34,7 +34,7 @@
     "entities": {
       "patterns": [
         {
-          "match": "\\b([a-zA-Z]+)\\(",
+          "match": "\\b([a-zA-Z]+)\\s*\\(",
           "captures": {
             "1": { "name": "entity.name.function.nala" }
           }
