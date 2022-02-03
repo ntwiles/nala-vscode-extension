@@ -1,32 +1,81 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Nala",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.nala",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.nala",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.nala",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.nl"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Nala",
+  "patterns": [
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#entities"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#storages"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.numeric.nala",
+          "match": "\\b([0-9]+)\\b"
+        },
+        {
+          "name": "constant.language.nala",
+          "match": "\\b(true|false)\\b"
+        }
+      ]
+    },
+    "entities": {
+      "patterns": [
+        {
+          "match": "\\b([a-zA-Z]+)\\(",
+          "captures": {
+            "1": { "name": "entity.name.function.nala" }
+          }
+        },
+        {
+          "name": "entity.name.type.nala",
+          "match": "\\b(Array|Bool|Func|Number|String|Void)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.nala",
+          "match": "\\b(const|for|if|in|mut|void|wiles)\\b"
+        },
+        {
+          "name": "keyword.operator.nala",
+          "match": "(==|=|>|<|:|-|\\+|\\*|\\\\)"
+        }
+      ]
+    },
+    "storages": {
+      "patterns": [
+        {
+          "name": "storage.type.nala",
+          "match": "\\b(func)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.single.nawla",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.nala",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.nl"
 }
