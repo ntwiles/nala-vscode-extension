@@ -1,0 +1,34 @@
+{
+  "name": "nala-lang",
+  "displayName": "Nala Lang",
+  "description": "Syntax highlighting for Nala lang",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "nala",
+        "aliases": [
+          "Nala",
+          "nala"
+        ],
+        "extensions": [
+          ".nl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nala",
+        "scopeName": "source.nl",
+        "path": "./syntaxes/nala.tmLanguage.json"
+      }
+    ]
+  }
+}
