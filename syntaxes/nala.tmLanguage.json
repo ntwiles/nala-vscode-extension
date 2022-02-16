@@ -59,7 +59,7 @@
       "patterns": [
         {
           "name": "keyword.control.nala",
-          "match": "\\b(const|for|if|in|mut|void|wiles)\\b"
+          "match": "\\b(as|const|for|if|in|is|mut|pattern|unwrap|void|wiles)\\b"
         },
         {
           "name": "keyword.operator.nala",
