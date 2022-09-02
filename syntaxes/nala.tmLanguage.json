@@ -3,6 +3,9 @@
   "name": "Nala",
   "patterns": [
     {
+      "include": "#comments"
+    },
+    {
       "include": "#constants"
     },
     {
@@ -19,6 +22,19 @@
     }
   ],
   "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash",
+          "match": "//.*"
+        },
+        {
+          "name": "comment.block",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
     "constants": {
       "patterns": [
         {
