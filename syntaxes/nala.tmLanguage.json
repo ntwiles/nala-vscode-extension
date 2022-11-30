@@ -87,7 +87,7 @@
       "patterns": [
         {
           "name": "storage.type.nala",
-          "match": "\\b(func)\\b"
+          "match": "\\b(func|struct)\\b"
         },
         {
           "match": "\\b(enum)\\s+([a-zA-Z]+)\\b",
