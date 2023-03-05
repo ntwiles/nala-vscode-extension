@@ -52,7 +52,9 @@
         {
           "match": "\\b([a-zA-Z]+)\\(",
           "captures": {
-            "1": { "name": "entity.name.function.nala" }
+            "1": {
+              "name": "entity.name.function.nala"
+            }
           }
         },
         {
@@ -66,7 +68,9 @@
         {
           "match": "([a-zA-Z]+)::",
           "captures": {
-            "1": { "name": "entity.name.type.nala" }
+            "1": {
+              "name": "entity.name.type.nala"
+            }
           }
         }
       ]
@@ -75,7 +79,7 @@
       "patterns": [
         {
           "name": "keyword.control.nala",
-          "match": "\\b(as|const|for|if|in|is|mut|pattern|unwrap|void|wiles)\\b"
+          "match": "\\b(as|const|for|if|elif|else|in|is|match|mut|pattern|unwrap|void|wiles)\\b"
         },
         {
           "name": "keyword.operator.nala",
@@ -92,8 +96,12 @@
         {
           "match": "\\b(enum)\\s+([a-zA-Z]+)\\b",
           "captures": {
-            "1": { "name": "storage.type.nala" },
-            "2": { "name": "entity.name.type.nala" }
+            "1": {
+              "name": "storage.type.nala"
+            },
+            "2": {
+              "name": "entity.name.type.nala"
+            }
           }
         }
       ]
