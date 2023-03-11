@@ -62,10 +62,6 @@
           "match": "\\b(Array|Bool|Func|Number|String|Void)\\b"
         },
         {
-          "name": "entity.name.type.nala",
-          "match": "\\b(IAdd|ICompare|IDivide|IEqual|IMultiply|IPrint|ISubtract)\\b"
-        },
-        {
           "match": "([a-zA-Z]+)::",
           "captures": {
             "1": {
